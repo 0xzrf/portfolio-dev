@@ -87,7 +87,7 @@ const data = [
     category: "",
     title: "",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.013630050966400908/image.jpg",
-    content: <DummyContent description="Created a Token minting platform to let users mint their own token in minutes" vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667691/Recording_2024-09-18_192423_usqqg9.mp4" GhLink="https://github.com/krishhh16/landing-page-boilerplate"/>,
+    content: <DummyContent description="Created a Token minting platform to let users mint their own token in minutes" vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667691/Recording_2024-09-18_192423_usqqg9.mp4" GhLink="https://github.com/krishhh16/Token-Creation"/>,
   },
   {
     category: "",
