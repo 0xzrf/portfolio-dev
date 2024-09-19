@@ -7,15 +7,15 @@ function Info() {
     Learning technologies that I'm curious about, & hacking what I understand thoroughly`;
 
   return (
-    <div className="ml-[11.9rem] mt-10 ">
-      <div className="gap-28 flex">
+    <div className="md:ml-[11.9rem] ml-[1rem] mt-10 ">
+      <div className="md:gap-28 gap-12 flex md:flex-row flex-col ">
         <div className="font-serif">
-          <img src="/name.png" alt="logo" className="w-[17vw] h-[10vh]" />
+          <img src="/name.png" alt="logo" className="md:w-[20vw] w-[70%] h-[10vh] " />
         </div>
-        <div className="font-serif flex flex-col">
+        <div className="font-serif w-full flex flex-col">
           <TextGenerateEffect
             duration={0.75}
-            className="text-white font-serif mt-2 max-w-[30vw] whitespace-pre-line"
+            className="text-white font-serif mt-0 md:mt-2 md:max-w-[30vw]  whitespace-pre-line"
             words={words}
           />
           <div className="flex text-white mt-4 gap-3 justify-start">

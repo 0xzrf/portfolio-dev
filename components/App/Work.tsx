@@ -10,7 +10,7 @@ function Work() {
   ));
  
   return (
-    <div className="w-full h-full ml-[5.5rem] py-20">
+    <div className="w-full h-full ml-0 md:ml-[5.5rem] pt-20">
       <h2 className="max-w-7xl pl-4 mx-auto text-2xl md:text-5xl font-bold font-serif text-white">
         Recent Works
       </h2>
@@ -87,7 +87,7 @@ const data = [
     category: "",
     title: "",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.013630050966400908/image.jpg",
-    content: <DummyContent description="Created a Token minting platform to let users mint their own token in minutes" vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667691/Recording_2024-09-18_192423_usqqg9.mp4" GhLink="https://github.com/krishhh16/Token-Creation"/>,
+    content: <DummyContent description="Created a Token minting platform to let users mint their own token in minutes" vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667691/Recording_2024-09-18_192423_usqqg9.mp4" GhLink="https://github.com/krishhh16/landing-page-boilerplate"/>,
   },
   {
     category: "",
@@ -99,6 +99,6 @@ const data = [
     category: "",
     title: "",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.5012280725247149/image.jpg",
-    content: <DummyContent GhLink="https://github.com/krishhh16/Blockchain-Wallet" vidLink={"https://res.cloudinary.com/dr1by5yuc/video/upload/v1726687891/WALLET_lcyudk.mp4"} description="A project that let's user create their wallets from a seed phrase, and create as many Solana wallets from that single seed phrase"  link={""}/>,
+    content: <DummyContent GhLink="https://github.com/krishhh16/Token-Creation" vidLink={"https://res.cloudinary.com/dr1by5yuc/video/upload/v1726687891/WALLET_lcyudk.mp4"} description="A project that let's user create their wallets from a seed phrase, and create as many Solana wallets from that single seed phrase"  link={""}/>,
   }
 ];
