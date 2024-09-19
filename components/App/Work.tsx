@@ -99,6 +99,6 @@ const data = [
     category: "",
     title: "",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.5012280725247149/image.jpg",
-    content: <DummyContent GhLink="https://github.com/krishhh16/Token-Creation" vidLink={"https://res.cloudinary.com/dr1by5yuc/video/upload/v1726687891/WALLET_lcyudk.mp4"} description="A project that let's user create their wallets from a seed phrase, and create as many Solana wallets from that single seed phrase"  link={""}/>,
+    content: <DummyContent GhLink="https://github.com/krishhh16/Blockchain-Wallet" vidLink={"https://res.cloudinary.com/dr1by5yuc/video/upload/v1726687891/WALLET_lcyudk.mp4"} description="A project that let's user create their wallets from a seed phrase, and create as many Solana wallets from that single seed phrase"  link={""}/>,
   }
 ];
