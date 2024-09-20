@@ -75,7 +75,7 @@ const data = [
     category: "",
     title: "",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.7902439978026092/image.jpg",
-    content: <DummyContent description="A platform where user stake their sol to improve their Solgotchis!! Staking is gamified in order to encourage users to stake more and hence make the solana ecosystem even strong" vidLink="https://res.cloudinary.com/dr1by5yuc/video/upload/v1726685762/SOLGOTCHI_z44swo.mp4" link={"https://main.bounty-spread.pages.dev/"} GhLink={"https://github.com/krishhh16/Solgotchi"} />,
+    content: <DummyContent description="A platform where user stake their sol to improve their Solgotchis!! Staking is gamified in order to encourage users to stake more and hence make the solana ecosystem even strong" vidLink="https://res.cloudinary.com/dr1by5yuc/video/upload/v1726685762/SOLGOTCHI_z44swo.mp4" link={"https://solgotchi-dun.vercel.app/"} GhLink={"https://github.com/krishhh16/Solgotchi"} />,
   },
   {
     category:"",
