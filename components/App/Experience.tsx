@@ -17,6 +17,7 @@ export function Experience() {
             <li>Working as a freelance AI Automation developer and building AI-based tools and software in AAA business model specifically.</li>
             <li>Built different Chatbots (internal and external) in collaboration with other developers with the help of Open AI's API.</li>
             <li>Used GPT-4's abilities to build highly interactive chatbots and internal tools.</li>
+            <li>Worked with over <span className="font-bold text-blue-500">15+ clients remotely</span> from different countries and timezone difference from mine</li>
           </ul>
         </div>
       ),
@@ -30,6 +31,8 @@ export function Experience() {
           </h1>
           <ul className="list-disc list-inside space-y-6 leading-[2.5vh] text-white text-xs md:text-sm font-normal mb-8">
             <li>Working as an AI developer to help businesses automate tasks through the latest technologies such as AI.</li>
+            <li>Built AI tools for the company to automate some of their tasks using tools like pappeteer and more</li>
+            <li>Integrated softwares using node js and python for backend development</li>
           </ul>
         </div>
       ),
@@ -44,6 +47,7 @@ export function Experience() {
           <ul className="list-disc list-inside space-y-6 leading-[2.5vh] text-white text-xs md:text-sm font-normal mb-8">
             <li>DevOps heavy work to deploy AI in a scalable manner.</li>
             <li>Building client-facing websites.</li>
+            <li>Learnt a lot about website responsiveness and animations</li>
           </ul>
         </div>
       ),
