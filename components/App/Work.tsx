@@ -81,7 +81,7 @@ const data = [
     category:"",
     title: "",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.07752762384275669/image.jpg",
-    content: <DummyContent  description="Helps to create solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated." link={"https://main.bounty-spread.pages.dev/"} vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4" GhLink={"https://github.com/krishhh16/Bounty-Spread"}/>,
+    content: <DummyContent  description="Helps to create solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated." link={"https://bountyspread.cc/"} vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4" GhLink={"https://github.com/krishhh16/Bounty-Spread"}/>,
   },
   {
     category: "",
