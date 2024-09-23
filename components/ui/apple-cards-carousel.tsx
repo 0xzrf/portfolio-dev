@@ -26,13 +26,14 @@ type Card = {
   title: string;
   category: string;
   content: React.ReactNode;
+  vidLink?: string;
 };
 
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
 }>({
-  onCardClose: () => {},
+  onCardClose: () => { },
   currentIndex: 0,
 });
 
@@ -132,7 +133,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        
+
       </div>
     </CarouselContext.Provider>
   );
@@ -150,6 +151,7 @@ export const Card = ({
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const [isVideo, setIsVideo] = useState(false);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -223,6 +225,8 @@ export const Card = ({
       </AnimatePresence>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
+        onHoverStart={() => setIsVideo(true)}
+        onHoverEnd={() => setIsVideo(false)}
         onClick={handleOpen}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[20vh] w-[70vw] md:h-[30rem] md:w-80 lg:h-[40vh] lg:w-[40vw] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
@@ -234,19 +238,30 @@ export const Card = ({
           >
             {card.category}
           </motion.p>
-          <motion.p
+         {!isVideo &&  <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
             className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
           >
             {card.title}
-          </motion.p>
+          </motion.p>}
         </div>
-        <BlurImage
-          src={card.src}
-          alt={card.title}
-          fill
-          className="object-cover absolute z-10 inset-0"
-        />
+
+        {!isVideo ? (
+          <BlurImage
+            src={card.src}
+            alt={card.title}
+            fill
+            className="object-cover absolute z-10 inset-0"
+          />
+        ) : (
+          <video
+            src={card.vidLink || card.src}
+            className=" top-0 absolute shadow-md"
+            autoPlay
+            loop
+            muted
+          />
+        )}
       </motion.button>
     </>
   );

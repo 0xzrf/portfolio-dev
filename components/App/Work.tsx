@@ -69,35 +69,47 @@ const DummyContent = ({link, GhLink, description, vidLink}: {vidLink: string,des
     </>
   );
 };
+type Card = {
+  src: string;
+  title: any;
+  category: string;
+  content: React.ReactNode;
+  vidLink?: string;
+};
  
-const data = [
+const data: Card[] = [
   {
     category: "",
-    title: "",
+    title: <h1 className="text-white font-bold text-2xl">Solgotchis</h1>,
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.7902439978026092/image.jpg",
+    vidLink: "https://res.cloudinary.com/dr1by5yuc/video/upload/v1726685762/SOLGOTCHI_z44swo.mp4",
     content: <DummyContent description="A platform where user stake their sol to improve their Solgotchis!! Staking is gamified in order to encourage users to stake more and hence make the solana ecosystem even strong" vidLink="https://res.cloudinary.com/dr1by5yuc/video/upload/v1726685762/SOLGOTCHI_z44swo.mp4" link={"https://solgotchi-dun.vercel.app/"} GhLink={"https://github.com/krishhh16/Solgotchi"} />,
   },
   {
     category:"",
-    title: "",
+    title: <h1 className="text-white font-bold text-2xl">BountySpread</h1>,
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.07752762384275669/image.jpg",
+    vidLink: "https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4",
     content: <DummyContent  description="Helps to create solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated." link={"https://bountyspread.cc/"} vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4" GhLink={"https://github.com/krishhh16/Bounty-Spread"}/>,
   },
   {
     category: "",
-    title: "",
+    title: <h1 className="text-white font-bold text-2xl">Token Launchpad</h1>,
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.013630050966400908/image.jpg",
+    vidLink: "https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667691/Recording_2024-09-18_192423_usqqg9.mp4",
     content: <DummyContent description="Created a Token minting platform to let users mint their own token in minutes" vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667691/Recording_2024-09-18_192423_usqqg9.mp4" GhLink="https://github.com/krishhh16/landing-page-boilerplate"/>,
   },
   {
     category: "",
-    title: "",
+    title: <h1 className="text-white font-bold text-2xl">Refokus clone</h1>,
+    vidLink: "https://res.cloudinary.com/dr1by5yuc/video/upload/v1726684391/Refokus_h8beg9.mp4",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/27/0.9723566942446507/image.jpg",
     content: <DummyContent  description="Experimented with framer & other UI enhancing libraries" vidLink="https://res.cloudinary.com/dr1by5yuc/video/upload/v1726684391/Refokus_h8beg9.mp4" GhLink="https://github.com/krishhh16/landing-page-boilerplate"/>,
   },
   {
     category: "",
-    title: "",
+    title: <h1 className="text-white font-bold text-2xl">Vimpt</h1>,
+    vidLink: "https://res.cloudinary.com/dr1by5yuc/video/upload/v1726687891/WALLET_lcyudk.mp4",
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.5012280725247149/image.jpg",
     content: <DummyContent GhLink="https://github.com/krishhh16/Token-Creation" vidLink={"https://res.cloudinary.com/dr1by5yuc/video/upload/v1726687891/WALLET_lcyudk.mp4"} description="A project that let's user create their wallets from a seed phrase, and create as many Solana wallets from that single seed phrase"  link={""}/>,
   }
