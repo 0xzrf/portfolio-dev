@@ -58,10 +58,11 @@ const DummyContent = ({link, GhLink, description, vidLink}: {vidLink: string,des
             <div className="mt-6">
               <h2 className="text-xl font-semibold text-white mb-4">Demo Video</h2>
               <div className="relative pt-[56.25%]">
-                <iframe
+                <video
                   src={vidLink}
                   className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
-                  allowFullScreen
+                  loop
+                  muted
                 />
               </div>
             </div>
