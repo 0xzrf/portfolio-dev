@@ -12,11 +12,23 @@ const ReadingList = () => {
     "Cybersecurity": [
         {title: "CompTIA Linux+, Security+ & Network+ books(Just for the knowledge)", completed: false},
         {title:"Linux basics for hackers by hacker arise", completed: false}
+    ],
+    "Upcoming Projects": [
+      {title: "Multi-sig wallet", completed: false},
+      {title:"Project based on Token Extension(SOLANA)", completed: false},
+      {title: "Rust backend w/ Axum", completed: false},
+      {title:"Rust based chatbot", completed: false},
+      {title: "Vim Editor in Rust", completed: false},
+      {title:"Git in Rust", completed: false},
+      {title: "Small OS In Rust", completed: false},
+      {title:"Game in rust", completed: false},
+      {title: "TCP and HTTP in Rust", completed: false},
+      {title:"Linux Kernel in Rust", completed: false}
     ]
   };
 
   return (
-    <div className="bg-[#18191a] text-gray-300 h-screen px-56 pt-20 font-mono">
+    <div className="bg-[#18191a] text-gray-300 min-h-screen px-56 pt-20 font-mono">
        <div className="mb-4 text-green-500">
         ┌──(zeref㉿kali)-[~]
         <br />
