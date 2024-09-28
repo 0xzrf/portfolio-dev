@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import {motion} from "framer-motion"
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { TextGenerateEffect } from "@/components/ui/text-generation";
+import Link from "next/link";
 function Info() {
   const words = `Hacker and builder
     Learning technologies that I'm curious about, & hacking what I understand thoroughly`;
@@ -19,33 +21,39 @@ function Info() {
             words={words}
           />
           <div className="flex text-white mt-4 gap-3 justify-start">
-        <Mail />
-        <a
-          href="https://github.com/krishhh16"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Github />
-        </a>
-        <a
-          href="https://linkedin.com/in/krishhh16"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Linkedin />
-        </a>
-        <a
-          href="https://x.com/dev_krishhh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Twitter />
-        </a>
-      </div>
+            <Mail />
+            <a
+              href="https://github.com/krishhh16"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github />
+            </a>
+            <a
+              href="https://linkedin.com/in/krishhh16"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin />
+            </a>
+            <a
+              href="https://x.com/dev_krishhh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter />
+            </a>
+          </div>
+          <Link href="/reading-list">
+            <motion.h1 className="text-white font-bold hover:underline mt-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4.5 }}>
+              Check my reading list to know more about my interests{"->"}
+            </motion.h1>
+          </Link>
         </div>
-        
+
+
       </div>
-      
+
     </div>
   );
 }
