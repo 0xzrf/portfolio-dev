@@ -4,11 +4,10 @@ import { Check, Circle } from 'lucide-react';
 const ReadingList = () => {
   const books = {
     "Builder's skills": [
-      {title: "Head's down C", link:"https://karadev.net/uroci/filespdf/files/head-first-c-o-reilly-david-grifffiths-dawn-griffiths.pdf", completed: false},
+      {title: "Head First C", link:"https://karadev.net/uroci/filespdf/files/head-first-c-o-reilly-david-grifffiths-dawn-griffiths.pdf", completed: false},
       {title: "Computer Systems: A programer's perspective", link:"https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/books/CSAPP_2016.pdf", completed: false},
       { title: "The Rust Book",link: "https://doc.rust-lang.org/book/", completed: false },
       { title: "Pragmatic programmer", link: "https://github.com/lighthousand/books/blob/master/the-pragmatic-programmer.pdf", completed: false },
-      { title: "Don't make me think(Design)", completed: false },
     ],
     "Cybersecurity": [
         {title: "CompTIA Linux+, Security+ & Network+ books(Just for the knowledge)", completed: false},
