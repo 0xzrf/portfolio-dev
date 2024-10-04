@@ -79,19 +79,19 @@ type Card = {
 };
  
 const data: Card[] = [
+    {
+    category:"",
+    title: <h1 className="text-white font-bold text-2xl">BountySpread</h1>,
+    src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.07752762384275669/image.jpg",
+    vidLink: "https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4",
+    content: <DummyContent  description="Helps to create solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated. Won a Hackathon and Solana X CoinDCX grant of $1,500 by superteam for this project" link={"https://bountyspread.cc/"} vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4" GhLink={"https://github.com/krishhh16/Bounty-Spread"}/>,
+  },
   {
     category: "",
     title: <h1 className="text-white font-bold text-2xl">Solgotchis</h1>,
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.7902439978026092/image.jpg",
     vidLink: "https://res.cloudinary.com/dr1by5yuc/video/upload/v1726685762/SOLGOTCHI_z44swo.mp4",
     content: <DummyContent description="A platform where user stake their sol to improve their Solgotchis!! Staking is gamified in order to encourage users to stake more and hence make the solana ecosystem even strong" vidLink="https://res.cloudinary.com/dr1by5yuc/video/upload/v1726685762/SOLGOTCHI_z44swo.mp4" link={"https://solgotchi-dun.vercel.app/"} GhLink={"https://github.com/krishhh16/Solgotchi"} />,
-  },
-  {
-    category:"",
-    title: <h1 className="text-white font-bold text-2xl">BountySpread</h1>,
-    src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.07752762384275669/image.jpg",
-    vidLink: "https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4",
-    content: <DummyContent  description="Helps to create solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated." link={"https://bountyspread.cc/"} vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4" GhLink={"https://github.com/krishhh16/Bounty-Spread"}/>,
   },
   {
     category: "",
