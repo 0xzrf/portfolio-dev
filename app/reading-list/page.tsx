@@ -14,6 +14,8 @@ const ReadingList = () => {
         {title:"Linux basics for hackers by hacker arise", completed: false}
     ],
     "Upcoming Projects": [
+      {title: "A GPT-3 Smart contract Copoilot for Solana Development", completed: false},
+      {title: "A Wallet analyzer and security audit tool", completed: false},
       {title: "Multi-sig wallet", completed: false},
       {title:"Project based on Token Extension(SOLANA)", completed: false},
       {title: "Rust backend w/ Axum", completed: false},
