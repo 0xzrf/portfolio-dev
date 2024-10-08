@@ -23,7 +23,7 @@ function Work() {
 }
 
 export default Work;
-const DummyContent = ({link, GhLink, description, vidLink}: {vidLink: string,description: string, link?: string, GhLink: string}) => {
+const DummyContent = ({link, GhLink, description, vidLink}: {vidLink: string,description: any, link?: string, GhLink: string}) => {
   return (
     <>
      
@@ -41,7 +41,7 @@ const DummyContent = ({link, GhLink, description, vidLink}: {vidLink: string,des
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-200 mb-2 md:mb-0"
               >
-                Live Demo
+                Live Link
               </a>}
               <a
                 href={GhLink}
@@ -84,7 +84,11 @@ const data: Card[] = [
     title: <h1 className="text-white font-bold text-2xl">BountySpread</h1>,
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.07752762384275669/image.jpg",
     vidLink: "https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4",
-    content: <DummyContent  description="Helps to create solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated. Won a Hackathon and Solana X CoinDCX grant of $1,500 by superteam for this project" link={"https://bountyspread.cc/"} vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4" GhLink={"https://github.com/krishhh16/Bounty-Spread"}/>,
+    content: <DummyContent  description=<h1>Helps to create  solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated. Won a Hackathon and Solana X CoinDCX grant of $1,500 by superteam for this project <br/> <h1 className="text-xl font-bold">Acheivements:</h1><br/><ul>  
+      <li className="font-semibold text-blue-400">- Won a Hackathon and Solana X CoinDCX grant of $1,500 by superteam for this project</li>
+      <li>- Became a Superteam India Member afterwards</li>
+      <li>- Custom data endpoint integration is facilitated</li>
+    </ul>  </h1> link={"https://bountyspread.cc/"} vidLink="https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4" GhLink={"https://github.com/krishhh16/Bounty-Spread"}/>,
   },
   {
     category: "",

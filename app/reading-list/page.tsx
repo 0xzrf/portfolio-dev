@@ -18,6 +18,7 @@ const ReadingList = () => {
       {title:"Project based on Token Extension(SOLANA)", completed: false},
       {title: "Rust backend w/ Axum", completed: false},
       {title:"Rust based chatbot", completed: false},
+      {title:"Terminal based communication system and collaboration tool in Rust", completed: false},
       {title: "Vim Editor in Rust", completed: false},
       {title:"Git in Rust", completed: false},
       {title: "Small OS In Rust", completed: false},

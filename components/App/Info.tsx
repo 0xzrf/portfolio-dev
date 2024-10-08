@@ -46,7 +46,7 @@ function Info() {
           </div>
           <Link href="/reading-list">
             <motion.h1 className="text-white font-bold hover:underline mt-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4.5 }}>
-              Check my reading list to know more about my interests{"->"}
+              Reading List{"->"}
             </motion.h1>
           </Link>
         </div>
