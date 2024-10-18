@@ -63,6 +63,7 @@ const DummyContent = ({link, GhLink, description, vidLink}: {vidLink: string,des
                   className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
                   loop
                   muted
+                  autoPlay
                 />
               </div>
             </div>
