@@ -86,6 +86,7 @@ const data: Card[] = [
     src: "https://d70djocle7hv2.cloudfront.net//uploads/17/0.07752762384275669/image.jpg",
     vidLink: "https://res.cloudinary.com/dlpeakxzf/video/upload/v1726667082/Recording_2024-09-18_191402_v66g43.mp4",
     content: <DummyContent  description=<h1>Helps to create  solana blinks out of crypto bounties. Integrated with escrow rust implemmentation for winners' fund transfer.Also custom data endpoint integration is facilitated. Won a Hackathon and Solana X CoinDCX grant of $1,500 by superteam for this project <br/> <h1 className="text-xl font-bold">Acheivements:</h1><br/><ul>  
+      <li className="font-semibold text-blue-400">- Won the Mercuryo Side track in the Radar Hackathon</li>
       <li className="font-semibold text-blue-400">- Won a Hackathon and Solana X CoinDCX grant of $1,500 by superteam for this project</li>
       <li>- Became a Superteam India Member afterwards</li>
       <li>- Custom data endpoint integration is facilitated</li>
