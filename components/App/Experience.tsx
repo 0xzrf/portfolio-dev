@@ -62,7 +62,7 @@ export function Experience() {
           <ul className="list-disc list-inside text-white space-y-6  leading-[2.5vh] text-xs md:text-sm font-normal mb-2">
             <li>Upskilling and Freelancing, building projects in various technologies such as AI and Web3 which I learnt through books and courses</li>
           </ul>
-            <span><LinkPreview url="https://github.com/krishhh16" className="font-bold flex text-white gap-2">
+            <span><LinkPreview url="https://github.com/0xzrf" className="font-bold flex text-white gap-2">
                Checkout my <Github />
             </LinkPreview></span>
         </div>
