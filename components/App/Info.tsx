@@ -30,7 +30,7 @@ function Info() {
               <Github />
             </a>
             <a
-              href="https://linkedin.com/in/krishhh16"
+              href="https://linkedin.com/in/0xzrf"
               target="_blank"
               rel="noopener noreferrer"
             >
