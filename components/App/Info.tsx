@@ -23,21 +23,21 @@ function Info() {
           <div className="flex text-white mt-4 gap-3 justify-start">
             <Mail />
             <a
-              href="https://github.com/krishhh16"
+              href="https://github.com/0xzrf"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Github />
             </a>
             <a
-              href="https://linkedin.com/in/0xzrf"
+              href="https://linkedin.com/in/krishhh16"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin />
             </a>
             <a
-              href="https://x.com/dev_krishhh"
+              href="https://x.com/0xzrf"
               target="_blank"
               rel="noopener noreferrer"
             >
