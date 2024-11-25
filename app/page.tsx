@@ -1,6 +1,9 @@
 import Info from "@/components/App/Info"
 import Work  from "@/components/App/Work";
 import {Experience} from "@/components/App/Experience";
+  
+
+
 
 export default function Home() {
   return (
