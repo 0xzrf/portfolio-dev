@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { LinkPreview } from "@/components/ui/link-preview";
-import {  Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 export function Experience() {
   const data = [
@@ -62,9 +62,39 @@ export function Experience() {
           <ul className="list-disc list-inside text-white space-y-6  leading-[2.5vh] text-xs md:text-sm font-normal mb-2">
             <li>Upskilling and Freelancing, building projects in various technologies such as AI and Web3 which I learnt through books and courses</li>
           </ul>
-            <span><LinkPreview url="https://github.com/0xzrf" className="font-bold flex text-white gap-2">
-               Checkout my <Github />
-            </LinkPreview></span>
+          <span><LinkPreview url="https://github.com/0xzrf" className="font-bold flex text-white gap-2">
+            Checkout my <Github />
+          </LinkPreview></span>
+        </div>
+      ),
+    },
+    {
+      title: "Nov 2024 - Dec. 2024",
+      content: (
+        <div>
+          <h1 className="text-2xl md:text-3xl font-bold mb-6 text-white">
+            Web3 dev @Supersize.gg
+          </h1>
+          <ul className="list-disc space-y-4 list-inside leading-[2.5vh] text-white text-xs md:text-sm font-normal mb-8">
+            <li>Worked on Front-end integrations and backend.</li>
+            <li>Worked with Jupiter API to build the swap functionality.</li>
+            <li>Used on-chain data to represent data on the frontend.</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Nov 2024 - Dec. 2024",
+      content: (
+        <div>
+          <h1 className="text-2xl md:text-3xl font-bold mb-6 text-white">
+            Blockchain developer(ETH and SOL)
+          </h1>
+          <ul className="list-disc space-y-4 list-inside leading-[2.5vh] text-white text-xs md:text-sm font-normal mb-8">
+            <li>Built scripts to moniter account transactions.</li>
+            <li>Built charts using apis from trading platforms like Pump.fun and Geckoterminal.</li>
+            <li>Built highly tested smart contracts in both Solidity(Foundry) and Rust(Anchor).</li>
+          </ul>
         </div>
       ),
     },
