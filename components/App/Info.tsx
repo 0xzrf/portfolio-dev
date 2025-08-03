@@ -6,8 +6,8 @@ import { TextGenerateEffect } from "@/components/ui/text-generation";
 import Link from "next/link";
 
 function Info() {
-  const words = `Hacker and builder
-    Learning technologies that I'm curious about, & hacking what I understand thoroughly`;
+  const words1 = `Hacker and builder`;
+  const words2 = `Learning technologies that I'm curious about, & hacking what I understand thoroughly`;
 
   return (
     <div className="md:ml-[11.9rem] ml-[1rem] mt-10">
@@ -44,7 +44,12 @@ function Info() {
               <TextGenerateEffect
                 duration={0.75}
                 className="text-white font-serif mt-0 md:mt-2 md:max-w-[30vw] whitespace-pre-line"
-                words={words}
+                words={words1}
+              />
+              <TextGenerateEffect
+                duration={0.75}
+                className="text-white font-serif mt-0 md:mt-2 md:max-w-[30vw] whitespace-pre-line"
+                words={words2}
               />
             </div>
           </div>
