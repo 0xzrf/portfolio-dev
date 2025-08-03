@@ -63,7 +63,7 @@ function Info() {
           >
             {/* Email */}
             <motion.a
-              href="mailto:your-email@example.com"
+              href="mailto:ktmedia23@gmail.com"
               className="group p-3 rounded-xl bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 transition-all duration-300 transform hover:scale-110 hover:shadow-lg border border-zinc-600/50"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
