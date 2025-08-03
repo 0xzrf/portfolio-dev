@@ -3,28 +3,21 @@ import { Check, Circle } from 'lucide-react';
 
 const ReadingList = () => {
   const books = {
-    "Builder's skills": [
-      {title: "Head First C", link:"https://karadev.net/uroci/filespdf/files/head-first-c-o-reilly-david-grifffiths-dawn-griffiths.pdf", completed: false},
+    "CS Knowledge": [
+      {title: "The C Programming language", link:"https://github.com/auspbro/ebook-c/blob/master/The.C.Programming.Language.2Nd.Ed%20Prentice.Hall.Brian.W.Kernighan.and.Dennis.M.Ritchie..pdf", completed: false},
       {title: "Computer Systems: A programer's perspective", link:"https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/books/CSAPP_2016.pdf", completed: false},
-      { title: "The Rust Book",link: "https://doc.rust-lang.org/book/", completed: false },
-      { title: "Pragmatic programmer", link: "https://github.com/lighthousand/books/blob/master/the-pragmatic-programmer.pdf", completed: false },
-    ],
-    "Cybersecurity": [
-        {title: "CompTIA Linux+, Security+ & Network+ books(Just for the knowledge)", completed: false},
-        {title:"Linux basics for hackers by hacker arise", completed: false}
+      { title: "x86 ASM Language",link: "https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe", completed: false },
+      { title: "Intro To Algorithm", link: "https://github.com/calvint/AlgorithmsOneProblems/blob/master/Algorithms/Thomas%20H.%20Cormen,%20Charles%20E.%20Leiserson,%20Ronald%20L.%20Rivest,%20Clifford%20Stein%20Introduction%20to%20Algorithms,%20Third%20Edition%20%202009.pdf", completed: false },
     ],
     "Upcoming Projects": [
-      {title: "A GPT-3 Smart contract Copoilot for Solana Development", completed: false},
+      {title: "A GPT-3 Smart contract Copoilot for Solana Development", completed: true},
       {title: "A Wallet analyzer and security audit tool", completed: false},
-      {title: "Multi-sig wallet", completed: false},
-      {title:"Project based on Token Extension(SOLANA)", completed: false},
-      {title: "Rust backend w/ Axum", completed: false},
+      {title: "Rust backend w/ Axum", completed: true},
       {title:"Rust based chatbot", completed: false},
       {title:"Terminal based communication system and collaboration tool in Rust", completed: false},
       {title: "Vim Editor in Rust", completed: false},
       {title:"Git in Rust", completed: false},
       {title: "Small OS In Rust", completed: false},
-      {title:"Game in rust", completed: false},
       {title: "TCP and HTTP in Rust", completed: false},
       {title:"Linux Kernel in Rust", completed: false}
     ]
