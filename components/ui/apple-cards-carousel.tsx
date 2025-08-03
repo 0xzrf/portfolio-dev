@@ -92,41 +92,42 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
       <div className="relative w-full">
+        {/* Enhanced scroll container */}
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
+          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none] relative"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
-          <div
-            className={cn(
-              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
-            )}
-          ></div>
+          {/* Gradient fade effects */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
 
           <div
             className={cn(
-              "flex flex-row justify-start gap-4 pl-4",
-              "max-w-7xl mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
+              "flex flex-row justify-start gap-6 pl-4",
+              "max-w-7xl mx-auto"
             )}
           >
             {items.map((item, index) => (
               <motion.div
                 initial={{
                   opacity: 0,
-                  y: 20,
+                  y: 30,
+                  scale: 0.95,
                 }}
                 animate={{
                   opacity: 1,
                   y: 0,
+                  scale: 1,
                   transition: {
-                    duration: 0.5,
-                    delay: 0.2 * index,
-                    ease: "easeOut",
+                    duration: 0.6,
+                    delay: 0.1 * index,
+                    ease: [0.25, 0.46, 0.45, 0.94],
                     once: true,
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
+                className="last:pr-[5%] md:last:pr-[33%] rounded-3xl"
               >
                 {item}
               </motion.div>
@@ -134,6 +135,20 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           </div>
         </div>
 
+        {/* Enhanced scroll indicators */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {items.map((_, index) => (
+            <motion.div
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? "bg-gradient-to-r from-blue-500 to-purple-500 w-8" 
+                  : "bg-zinc-600 hover:bg-zinc-500"
+              }`}
+              whileHover={{ scale: 1.2 }}
+            />
+          ))}
+        </div>
       </div>
     </CarouselContext.Provider>
   );
@@ -190,35 +205,36 @@ export const Card = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="bg-black/80 backdrop-blur-lg h-full w-full fixed inset-0"
+              className="bg-black/90 backdrop-blur-xl h-full w-full fixed inset-0"
             />
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-[#18191a] h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+              className="max-w-5xl mx-auto bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 h-fit z-[60] my-10 p-6 md:p-10 rounded-3xl font-sans relative border border-zinc-700/50 shadow-2xl"
             >
               <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto rounded-full flex items-center justify-center"
+                className="absolute top-6 right-6 h-10 w-10 rounded-full bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center transition-all duration-300 hover:scale-110 border border-zinc-600/50"
                 onClick={handleClose}
               >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                <IconX className="h-5 w-5 text-neutral-300" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
+                className="text-sm font-medium text-blue-400 mb-2"
               >
                 {card.category}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 dark:text-white"
+                className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight"
               >
                 {card.title}
               </motion.p>
-              <div className="py-10">{card.content}</div>
+              <div className="py-6">{card.content}</div>
             </motion.div>
           </div>
         )}
@@ -228,40 +244,61 @@ export const Card = ({
         onHoverStart={() => setIsVideo(true)}
         onHoverEnd={() => setIsVideo(false)}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[20vh] w-[70vw] md:h-[30rem] md:w-80 lg:h-[40vh] lg:w-[40vw] overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="group rounded-3xl bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 h-[20vh] w-[70vw] md:h-[30rem] md:w-80 lg:h-[40vh] lg:w-[40vw] overflow-hidden flex flex-col items-start justify-start relative z-10 border border-zinc-700/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-zinc-600/70"
       >
-        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="relative z-40 p-8">
+        {/* Enhanced gradient overlay */}
+        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent z-30 pointer-events-none" />
+        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 z-30 pointer-events-none" />
+        
+        {/* Content overlay */}
+        <div className="relative z-40 p-6 md:p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
+            className="text-blue-400 text-sm md:text-base font-medium font-sans text-left mb-2 opacity-80"
           >
             {card.category}
           </motion.p>
-         {!isVideo &&  <motion.p
-            layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
-          >
-            {card.title}
-          </motion.p>}
+          {!isVideo && (
+            <motion.p
+              layoutId={layout ? `title-${card.title}` : undefined}
+              className="text-white text-xl md:text-3xl font-bold max-w-xs text-left [text-wrap:balance] font-sans leading-tight group-hover:text-blue-100 transition-colors duration-300"
+            >
+              {card.title}
+            </motion.p>
+          )}
+          
+          {/* Hover indicator */}
+          <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="flex items-center gap-2 text-white/80 text-sm">
+              <span>View Details</span>
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
         </div>
 
+        {/* Background image/video */}
         {!isVideo ? (
           <BlurImage
             src={card.src}
             alt={card.title}
             fill
-            className="object-cover absolute z-10 inset-0"
+            className="object-cover absolute z-10 inset-0 transition-transform duration-700 group-hover:scale-110"
           />
         ) : (
           <video
             src={card.vidLink || card.src}
-            className=" top-0 absolute shadow-md"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             autoPlay
             loop
             muted
+            playsInline
           />
         )}
+        
+        {/* Shimmer effect on hover */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 z-20 pointer-events-none" />
       </motion.button>
     </>
   );

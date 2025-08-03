@@ -55,7 +55,6 @@ export const LinkPreview = ({
   }
 
   const [isOpen, setOpen] = React.useState(false);
-
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -64,13 +63,12 @@ export const LinkPreview = ({
 
   const springConfig = { stiffness: 100, damping: 15 };
   const x = useMotionValue(0);
-
   const translateX = useSpring(x, springConfig);
 
   const handleMouseMove = (event: any) => {
     const targetRect = event.target.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2;
     x.set(offsetFromCenter);
   };
 
@@ -99,7 +97,7 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
-          className={cn("text-black dark:text-white", className)}
+          className={cn("text-black dark:text-white transition-all duration-300 hover:scale-105", className)}
           href={url}
         >
           {children}
@@ -114,38 +112,51 @@ export const LinkPreview = ({
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                initial={{ opacity: 0, y: 20, scale: 0.6, rotateX: -15 }}
                 animate={{
                   opacity: 1,
                   y: 0,
                   scale: 1,
+                  rotateX: 0,
                   transition: {
                     type: "spring",
                     stiffness: 260,
                     damping: 20,
                   },
                 }}
-                exit={{ opacity: 0, y: 20, scale: 0.6 }}
-                className="shadow-xl rounded-xl"
+                exit={{ opacity: 0, y: 20, scale: 0.6, rotateX: -15 }}
+                className="shadow-2xl rounded-2xl overflow-hidden"
                 style={{
                   x: translateX,
                 }}
               >
                 <Link
                   href={url}
-                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
+                  className="block p-2 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700/50 shadow-2xl rounded-2xl hover:border-zinc-600/70 transition-all duration-300 group"
                   style={{ fontSize: 0 }}
                 >
-                  <Image
-                    src={isStatic ? imageSrc : src}
-                    width={width}
-                    height={height}
-                    quality={quality}
-                    layout={layout}
-                    priority={true}
-                    className="rounded-lg"
-                    alt="preview image"
-                  />
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 blur-xl rounded-2xl"></div>
+                  
+                  <div className="relative z-10">
+                    <Image
+                      src={isStatic ? imageSrc : src}
+                      width={width}
+                      height={height}
+                      quality={quality}
+                      layout={layout}
+                      priority={true}
+                      className="rounded-xl transition-transform duration-500 group-hover:scale-105"
+                      alt="preview image"
+                    />
+                    
+                    {/* Overlay with URL */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 rounded-b-xl">
+                      <p className="text-white text-xs font-medium truncate">
+                        {url}
+                      </p>
+                    </div>
+                  </div>
                 </Link>
               </motion.div>
             )}

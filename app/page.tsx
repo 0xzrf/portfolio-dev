@@ -7,8 +7,8 @@ export default function Home() {
   return (
    <div className="min-h-screen w-full  overflow-hidden" style={{ backgroundColor: '#18191a', paddingTop: "1px" }}>
       <Info/>
-      <Work/>
       <Experience />
+      <Work/>
    </div>
   );
 }
