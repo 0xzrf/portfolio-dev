@@ -23,9 +23,9 @@ function Info() {
             {/* Background glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-2xl rounded-full"></div>
             <img 
-              src="/zeref.png" 
+              src="/zeref2.png" 
               alt="logo" 
-              className="md:w-[20vw] w-[70%] h-[10vh] relative z-10 drop-shadow-2xl" 
+              className="md:w-[50vw] w-[70%] h-[15vh] relative z-10 drop-shadow-2xl" 
             />
           </div>
         </motion.div>
