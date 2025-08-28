@@ -3,8 +3,16 @@ import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const RustProjects = [
+  {
+    title: "Real time terminal communication",
+    heading: "CLI tool",
+    description: "A CLI tool written in rust to communicate with people in terminal itself.",
+    link: "https://github.com/0xzrf/Rust-programs/tree/main/real-time-communication",
+    tags: ["Rust", "CLI"],
+  },
   {
     title: "Terminal shell",
     heading: "CLI tool",
@@ -82,25 +90,21 @@ function Work() {
       {/* Experience Overview Section */}
       <div className="max-w-7xl mx-auto px-4 mb-16">
         <div className="bg-gradient-to-br from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 rounded-3xl p-8 border border-zinc-700/50 backdrop-blur-sm">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
-            <span className="text-orange-400 font-medium text-sm uppercase tracking-wider">Experience Overview</span>
-          </div>
 
           <h3 className="text-2xl md:text-4xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Technical Expertise
+              Acheivements
             </span>
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid  gap-8">
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-orange-300 mb-3">Rust & Solana Development</h4>
+              <h4 className="text-3xl font-semibold text-orange-300 mb-3">Rust & Solana Development</h4>
               <p className="text-gray-300 leading-relaxed">
-                Extensive experience in Rust programming and Solana smart contract development
-                Built multiple DeFi protocols, NFT marketplaces, and blockchain infrastructure tools. 
-                Specialized in performance optimization and security best practices for blockchain applications. <br/>
-                I've also contributed in open source projects like <a href="https://github.com/solana-developers/program-examples" className="text-blue-400">Solana program examples</a>.
+                Got grant on 2 of my projects: <Link href="https://main.gryffin.pages.dev">Gryffin</Link> for $8k and <Link href={"https://bountyspread.cc"}>BountySpread</Link> for $1.5 k, both from Solana
+                <br/>I've won the Solana mini hackathon, and also won the Mercuryo side track with BountySpread, <br/>and was part of the exclusive breakout batch from SuperteamIN for Gryffin
+                <br/>
+                I've also contributed in open source projects like <a href="https://github.com/solana-developers/program-examples" className="text-blue-400">Solana program examples</a> 
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-full border border-orange-500/30">Rust</span>
@@ -110,21 +114,6 @@ function Work() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-blue-300 mb-3">Full-Stack Development</h4>
-              <p className="text-gray-300 leading-relaxed">
-                Proficient in modern web technologies with focus on AI integration and Web3 applications.
-                Experience building scalable applications with React, Next.js, and various backend technologies.
-                Strong emphasis on user experience and performance optimization.<br/>
-                I've also contributed in open source projects like <a href="https://github.com/Lewarn00/supersize-solana" className="text-blue-400">Supersize.gg</a> 
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">React</span>
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Next.js</span>
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">AI/ML</span>
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Web3</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

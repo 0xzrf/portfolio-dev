@@ -23,7 +23,7 @@ function Info() {
             {/* Background glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-2xl rounded-full"></div>
             <img 
-              src="/name.png" 
+              src="/zeref.png" 
               alt="logo" 
               className="md:w-[20vw] w-[70%] h-[10vh] relative z-10 drop-shadow-2xl" 
             />

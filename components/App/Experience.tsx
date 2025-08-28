@@ -3,6 +3,7 @@ import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { Github, Calendar, MapPin, Building } from "lucide-react";
+import Link from "next/link";
 
 export function Experience() {
   const data = [
@@ -152,52 +153,6 @@ export function Experience() {
       ),
     },
     {
-      title: "March 2024 - Currently",
-      company: "Freelance",
-      location: "Remote",
-      role: "Upskilling and Freelancing",
-      content: (
-        <div className="space-y-6">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-gradient-to-r from-yellow-600 to-orange-600">
-              <Building className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-white">
-                Upskilling and Freelancing
-              </h1>
-              <div className="flex items-center gap-4 text-gray-300 text-sm">
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  <span>March 2024 - Currently</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <MapPin className="w-4 h-4" />
-                  <span>Remote</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 rounded-2xl p-6 border border-zinc-700/50">
-            <ul className="space-y-4 text-gray-200 text-sm md:text-base leading-relaxed mb-6">
-              <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Upskilling and Freelancing, building projects in various technologies such as AI and Web3 which I learnt through books and courses</span>
-              </li>
-            </ul>
-            
-            <div className="mt-6">
-              <LinkPreview url="https://github.com/0xzrf" className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 border border-zinc-600/50">
-                <Github className="w-4 h-4" />
-                <span>Checkout my GitHub</span>
-              </LinkPreview>
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
       title: "Nov 2024 - Dec. 2024",
       company: "Supersize.gg",
       location: "Remote",
@@ -292,7 +247,7 @@ export function Experience() {
       ),
     },
     {
-      title: "Jan 2025 - March 2024",
+      title: "Jan 2025 - March 2025",
       company: "GreenKWH(Radar DePIN winner)",
       location: "Bengaluru, India",
       role: "Lead Smart contract developer",
@@ -338,11 +293,109 @@ export function Experience() {
         </div>
       ),
     },
+    {
+      title: "July 2025 - Aug 2025",
+      company: "IbiCash",
+      location: "Remote, Brazil",
+      role: "Lead Smart contract developer",
+      content: (
+        <div className="space-y-6">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600">
+              <Building className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h1 className="text-2xl md:text-3xl font-bold text-white">
+                Lead Smart contract engineer @IbiCash
+              </h1>
+              <div className="flex items-center gap-4 text-gray-300 text-sm">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  <span>July 2025 - Aug 2025</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <MapPin className="w-4 h-4" />
+                  <span>Remote, Brazil</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 rounded-2xl p-6 border border-zinc-700/50">
+            <ul className="space-y-4 text-gray-200 text-sm md:text-base leading-relaxed">
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+                <span>Built the tokenomics for the token and the smart contract for the token.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-teal-400 rounded-full mt-2 flex-shrink-0"></div>
+                <span>Built a mechanism to launch and swap your tokens in our custom bonding curve AMM</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                <span>Built mechanism to migrate to raydium.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                <span>Worked with the dev team to integrate it on their website.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Aug 2025 - Present",
+      company: "SkyTrade",
+      location: "Bengaluru, India",
+      role: "Lead Smart contract developer",
+      content: (
+        <div className="space-y-6">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600">
+              <Building className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h1 className="text-2xl md:text-3xl font-bold text-white">
+                Blockchain intern <Link href={"https://sky.trade/"}>@SkyTrade</Link>
+              </h1>
+              <div className="flex items-center gap-4 text-gray-300 text-sm">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  <span>Aug 2025 - Present</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <MapPin className="w-4 h-4" />
+                  <span>Remote, USA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 rounded-2xl p-6 border border-zinc-700/50">
+            <ul className="space-y-4 text-gray-200 text-sm md:text-base leading-relaxed">
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+                <span>Working cNFTs</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-teal-400 rounded-full mt-2 flex-shrink-0"></div>
+                <span>Working on open source fractionalization protocol.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                <span>Working with TWAP data to give fair prices to the participants.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ),
+    },
   ];
   
   return (
     <div className="w-full">
-      <Timeline data={data} />
+      <Timeline data={data.reverse()} />
     </div>
   );
 }
